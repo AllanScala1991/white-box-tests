@@ -1,6 +1,5 @@
 package com.example.tasks.models;
 
-import com.example.tasks.dtos.Priority;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,5 +27,5 @@ public class TaskModel {
 
     //priority
     @Column(nullable = false)
-    private Priority priority;
+    private String priority;
 }

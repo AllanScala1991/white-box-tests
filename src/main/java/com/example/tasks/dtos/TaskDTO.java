@@ -15,6 +15,6 @@ public class TaskDTO {
     String description;
 
     @NotBlank
-    Priority priority;
+    String priority;
 
 }
