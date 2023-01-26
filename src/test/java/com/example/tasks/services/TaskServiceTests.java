@@ -14,13 +14,18 @@ public class TaskServiceTests {
     private final TaskService taskService = Mockito.mock(TaskService.class);
     @Test
     public void createTaskTest() {
+        // cria o modelo de retorno do método
         TaskModel taskModel = new TaskModel();
 
+        // cria o mock do método create task, passando o modelo de retorno
         Mockito.when(taskService.createTask(taskModel)).thenReturn(taskModel);
 
+        // chama o metodo create task e salva na variavel result
         TaskModel result = taskService.createTask(taskModel);
 
+        // faz as assertions do retorno do método com o modelo de retorno
         Assertions.assertEquals(result, taskModel);
+        // verifica se no service o metodo create task realmente foi chamado
         Mockito.verify(taskService).createTask(taskModel);
     }
 
