@@ -68,6 +68,7 @@ public class TaskServiceTests {
     public void deleteTaskByID() {
         UUID id = UUID.randomUUID();
 
+        // mock para metodos void
         Mockito.doNothing().when(taskService).deleteTaskById(id);
 
         taskService.deleteTaskById(id);
