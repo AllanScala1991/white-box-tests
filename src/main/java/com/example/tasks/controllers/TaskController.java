@@ -51,7 +51,7 @@ public class TaskController {
 
         if(tasks.isEmpty()) {
             JSONObject response = new JSONObject();
-            response.put("message", "Nenhuma tarefa localizada.");
+            response.put("message", "Nenhuma tarefa localizada com esse nome.");
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response.toString());
         }
 
